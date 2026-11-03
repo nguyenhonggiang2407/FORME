@@ -1,0 +1,350 @@
+{
+  "items": [
+    {
+      "id": "white-tee",
+      "name": "Áo thun trắng",
+      "category": "top",
+      "colors": [
+        "white"
+      ],
+      "occasions": [
+        "everyday",
+        "weekend",
+        "evening"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-18186106.jpg",
+      "alt": "Áo thun trắng cổ tròn được gấp gọn trên nền sáng."
+    },
+    {
+      "id": "white-shirt",
+      "name": "Sơ mi trắng",
+      "category": "top",
+      "colors": [
+        "white"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-6276005.jpg",
+      "alt": "Chi tiết sơ mi trắng có cổ và hàng nút bấm kim loại."
+    },
+    {
+      "id": "blush-blouse",
+      "name": "Áo blouse hồng nhạt",
+      "category": "top",
+      "colors": [
+        "pink"
+      ],
+      "occasions": [
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-7432236.jpg",
+      "alt": "Áo blouse tay ngắn màu hồng nhạt trên ma-nơ-canh."
+    },
+    {
+      "id": "cream-knit",
+      "name": "Áo len màu kem",
+      "category": "top",
+      "colors": [
+        "beige"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "weekend"
+      ],
+      "temperatures": [
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-14377376.jpg",
+      "alt": "Áo len cổ chữ V màu kem cùng phụ kiện đan trên vải sáng."
+    },
+    {
+      "id": "neutral-cardigan",
+      "name": "Cardigan trung tính",
+      "category": "layer",
+      "colors": [
+        "blue",
+        "beige"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "weekend"
+      ],
+      "temperatures": [
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-9603628.jpg",
+      "alt": "Ba áo cardigan dệt màu xanh xám, kem và beige được xếp trên bàn."
+    },
+    {
+      "id": "blue-jeans",
+      "name": "Jeans xanh",
+      "category": "bottom",
+      "colors": [
+        "blue"
+      ],
+      "occasions": [
+        "everyday",
+        "weekend",
+        "evening"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-4109797.jpg",
+      "alt": "Cận cảnh các chiếc quần jeans xanh được gấp ngay ngắn."
+    },
+    {
+      "id": "black-trousers",
+      "name": "Quần suông đen",
+      "category": "bottom",
+      "colors": [
+        "black"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-33055598.jpg",
+      "alt": "Quần dài đen dáng rộng phối giày trắng trên nền sáng."
+    },
+    {
+      "id": "denim-jacket",
+      "name": "Áo khoác denim",
+      "category": "layer",
+      "colors": [
+        "blue"
+      ],
+      "occasions": [
+        "everyday",
+        "weekend"
+      ],
+      "temperatures": [
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-16428734.jpg",
+      "alt": "Áo khoác denim xanh lơ lửng trên phông nền xám."
+    },
+    {
+      "id": "camel-trench",
+      "name": "Trench coat màu camel",
+      "category": "layer",
+      "colors": [
+        "beige"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-5424917.jpg",
+      "alt": "Áo trench coat màu camel thắt eo và sơ mi beige treo trên tường xám."
+    },
+    {
+      "id": "white-sneakers",
+      "name": "Sneaker trắng",
+      "category": "shoes",
+      "colors": [
+        "white"
+      ],
+      "occasions": [
+        "everyday",
+        "weekend",
+        "work"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-1461048.jpg",
+      "alt": "Đôi giày thể thao trắng với chi tiết đen trên nền trắng."
+    },
+    {
+      "id": "neutral-loafers",
+      "name": "Loafer màu beige",
+      "category": "shoes",
+      "colors": [
+        "beige"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-9267589.jpg",
+      "alt": "Đôi loafer beige và ví màu tan trên mặt phẳng sáng."
+    },
+    {
+      "id": "blush-tote",
+      "name": "Túi xách hồng nhạt",
+      "category": "bag",
+      "colors": [
+        "pink"
+      ],
+      "occasions": [
+        "everyday",
+        "work",
+        "evening",
+        "weekend"
+      ],
+      "temperatures": [
+        "warm",
+        "mild",
+        "cool"
+      ],
+      "image": "./assets/item-22432983.jpg",
+      "alt": "Túi xách da màu hồng nhạt dáng đứng, điểm chi tiết màu vàng."
+    }
+  ],
+  "looks": [
+    {
+      "id": "denim-days",
+      "name": "Denim Days",
+      "subtitle": "Denim xanh, nhịp phố chậm.",
+      "itemIds": [
+        "white-shirt",
+        "blue-jeans",
+        "denim-jacket",
+        "white-sneakers"
+      ],
+      "occasion": "everyday",
+      "temperature": "mild",
+      "image": "./assets/look-40676108.jpg",
+      "alt": "Người mẫu mặc áo sơ mi denim và quần denim xanh ống rộng trên phố.",
+      "source": "curated",
+      "story": "Một bản phối lại từ cảm hứng denim đồng điệu: sơ mi trắng, jeans xanh và áo khoác denim. Sneaker trắng giúp tổng thể nhẹ nhàng cho những ngày dạo phố."
+    },
+    {
+      "id": "soft-tailoring",
+      "name": "Soft Tailoring",
+      "subtitle": "Chỉn chu theo cách thoải mái.",
+      "itemIds": [
+        "white-shirt",
+        "black-trousers",
+        "camel-trench",
+        "neutral-loafers"
+      ],
+      "occasion": "work",
+      "temperature": "mild",
+      "image": "./assets/look-23531833.jpg",
+      "alt": "Người mẫu ngồi trong studio với blazer nâu, áo trắng và jeans xanh nhạt.",
+      "source": "curated",
+      "story": "Mượn tinh thần blazer và denim từ ảnh để phối lại thành một bộ đồ chỉn chu với sơ mi trắng, quần suông đen và trench coat màu camel. Loafer beige giữ nét thoải mái cho một ngày làm việc."
+    },
+    {
+      "id": "city-neutrals",
+      "name": "City Neutrals",
+      "subtitle": "Những sắc trung tính của thành phố.",
+      "itemIds": [
+        "white-shirt",
+        "black-trousers",
+        "camel-trench",
+        "neutral-loafers",
+        "blush-tote"
+      ],
+      "occasion": "work",
+      "temperature": "mild",
+      "image": "./assets/look-29814515.jpg",
+      "alt": "Người mẫu trên phố Istanbul mặc waistcoat và quần beige với sơ mi trắng, mũ beret sáng màu và bốt tối màu.",
+      "source": "curated",
+      "story": "Ảnh gợi cảm hứng từ các lớp màu sáng và đường cắt thanh lịch. Bản phối đại diện dùng sơ mi trắng, quần đen, trench coat camel cùng một chiếc túi hồng nhạt."
+    },
+    {
+      "id": "off-duty",
+      "name": "Off Duty",
+      "subtitle": "Một ngày không cần vội.",
+      "itemIds": [
+        "cream-knit",
+        "black-trousers",
+        "white-sneakers"
+      ],
+      "occasion": "everyday",
+      "temperature": "mild",
+      "image": "./assets/look-32922514.jpg",
+      "alt": "Người mẫu nam mặc áo trắng có vân dệt, quần ống rộng đen và giày clog họa tiết trong studio.",
+      "source": "curated",
+      "story": "Áo dệt sáng màu và quần đen là điểm bắt đầu của một bộ đồ đơn giản. Phối lại với áo len kem và sneaker trắng để dễ đi lại trong ngày trời mát."
+    },
+    {
+      "id": "sunday-shirt",
+      "name": "Sunday Shirt",
+      "subtitle": "Dành khoảng trống cho cuối tuần.",
+      "itemIds": [
+        "white-shirt",
+        "blue-jeans",
+        "neutral-loafers",
+        "blush-tote"
+      ],
+      "occasion": "weekend",
+      "temperature": "warm",
+      "image": "./assets/look-34502518.jpg",
+      "alt": "Người mẫu nam mặc sơ mi ngắn tay họa tiết, quần khaki và loafer nâu trên nền studio sáng.",
+      "source": "curated",
+      "story": "Lấy cảm hứng từ phom sơ mi rộng và tinh thần thư thái trong ảnh. Phiên bản đại diện chuyển sang sơ mi trắng, jeans xanh và loafer beige cho lịch hẹn cuối tuần."
+    },
+    {
+      "id": "after-hours",
+      "name": "After Hours",
+      "subtitle": "Một chút ấm áp khi phố lên đèn.",
+      "itemIds": [
+        "blush-blouse",
+        "black-trousers",
+        "camel-trench",
+        "neutral-loafers",
+        "blush-tote"
+      ],
+      "occasion": "evening",
+      "temperature": "cool",
+      "image": "./assets/look-16678428.jpg",
+      "alt": "Người mẫu trên phố mặc áo khoác camel viền đen, jeans xám và bốt buộc dây màu burgundy.",
+      "source": "curated",
+      "story": "Ảnh gợi ý điểm nhấn từ lớp khoác màu camel trên nền tối. Phối lại cùng blouse hồng nhạt, quần suông đen và loafer beige cho một buổi tối trời mát."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "forme-wardrobe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A photo-led wardrobe and weekly outfit planner inspired by Runway.",
+  "scripts": { "dev": "node tools/serve.mjs", "check": "node --check dist/app.js && node --check dist/domain.js && node tools/check.mjs", "test": "node --test tests/*.test.mjs" },
+  "engines": { "node": ">=20" }
+}

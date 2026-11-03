@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="FORME — tủ đồ và lịch phối đồ cá nhân. Lưu cảm hứng, phối từ đồ đang có và chuẩn bị một tuần mặc đẹp.">
+  <title>FORME — Mặc đẹp từ những gì bạn có.</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Đến nội dung</a>
+  <header class="site-header">
+    <a href="#inspiration" class="wordmark" aria-label="FORME trang chủ">forme<span>✳</span></a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#inspiration" data-nav="inspiration">Cảm hứng</a>
+      <a href="#wardrobe" data-nav="wardrobe">Tủ đồ</a>
+      <a href="#week" data-nav="week">Tuần của tôi <span class="nav-dot" aria-hidden="true"></span></a>
+    </nav>
+    <button class="header-cta" data-action="builder">Phối một bộ <span aria-hidden="true">↗</span></button>
+  </header>
+  <p id="storage-notice" role="alert" hidden style="padding:12px 5%;background:#f4e3bd;color:#664d14;font-size:12px">Trình duyệt chưa cho lưu dữ liệu. Thay đổi chỉ giữ trong phiên này; hãy tải bản sao trong mục Về bản thử trước khi rời trang.</p>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer">
+    <a href="#inspiration" class="wordmark small">forme<span>✳</span></a>
+    <p>Ít phân vân hơn. Nhiều chất riêng hơn.</p>
+    <div><span class="local-indicator"></span> Lưu riêng trên trình duyệt này <button class="text-link" data-action="about">Về bản thử</button></div>
+  </footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <noscript><p class="noscript">Hãy bật JavaScript để sử dụng tủ đồ và lịch phối đồ.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
