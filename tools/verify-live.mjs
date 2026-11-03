@@ -1,0 +1,20 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const base=new URL(process.argv[2]||'');
+assert.equal(base.protocol,'https:');assert.equal(base.username,'');assert.equal(base.password,'');
+const manifest=JSON.parse(await readFile('docs/media-manifest.json','utf8'));
+const collect=v=>Array.isArray(v)?v.flatMap(collect):v&&typeof v==='object'?[...(v.filename&&v.sha256?[v]:[]),...Object.values(v).filter(x=>x&&typeof x==='object').flatMap(collect)]:[];
+const files=['index.html','app.js','domain.js','style.css','print.css','data.json','credits.html','favicon.svg',...collect(manifest).map(x=>'assets/'+x.filename)];
+const checks=await Promise.all(files.map(async file=>{
+  const response=await fetch(new URL(file,base),{signal:AbortSignal.timeout(25000),cache:'no-store'});
+  assert.equal(response.status,200,file);assert.ok(response.url.startsWith(base.origin));
+  const bytes=Buffer.from(await response.arrayBuffer()),expected=await readFile('dist/'+file);
+  const hash=createHash('sha256').update(bytes).digest('hex');assert.equal(hash,createHash('sha256').update(expected).digest('hex'),file);
+  if(file.endsWith('.jpg'))assert.match(response.headers.get('content-type'),/image\/jpeg/);
+  if(file.endsWith('.js'))assert.match(response.headers.get('content-type'),/javascript/);
+  return{file,status:response.status,bytes:bytes.length,sha256:hash};
+}));
+const report={url:base.href,verifiedAt:new Date().toISOString(),result:'passed',checks};
+if(process.argv[3])await writeFile(process.argv[3],JSON.stringify(report,null,2)+'\n');
+console.log(`Verified ${checks.length} HTTPS resources with exact local-source SHA-256 and successful status/MIME checks: ${base.href}`);

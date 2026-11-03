@@ -2,6 +2,12 @@
 
 **Mặc đẹp từ những gì bạn có.** A photo-led wardrobe and weekly outfit planner inspired by Runway.
 
+[**Open Live Demo ↗**](https://nguyenhonggiang2407.github.io/FORME/) · [Source](https://github.com/nguyenhonggiang2407/FORME) · [Verification](docs/VALIDATION.md)
+
+The public demo runs on GitHub Pages with no paid server or database. The deployed HTTPS application and all 26 resources were verified against the tested source, and its core interactions were tried in Chrome.
+
+![FORME live home page](docs/home.png)
+
 FORME turns fashion inspiration into a small daily routine: choose available pieces, save a combination, plan when to wear it, and pack only what the plan needs. It is an independent portfolio project, with original application code and licensed stock photography.
 
 ## What works
@@ -31,6 +37,12 @@ npm test
 ```
 
 The check verifies all photo hashes and attribution records, catalogue references, curated outfit tags and all 12 occasion/temperature combinations. The 11 domain tests cover persistence normalization, invalid data, calendar boundaries, outfit constraints, availability, packing and search.
+
+To compare a deployed static copy against the local application:
+
+```sh
+node tools/verify-live.mjs https://nguyenhonggiang2407.github.io/FORME/
+```
 
 ## Structure
 
