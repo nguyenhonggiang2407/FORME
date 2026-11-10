@@ -124,6 +124,17 @@ function exportState() {
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url;a.download=`forme-${localDate()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Đã chuẩn bị tệp sao lưu.');
 }
+function confirmRestore(restored) {
+  openModal(`${modalHead('Khôi phục từ bản sao?')}<p>Khôi phục sẽ thay tủ đồ, bộ phối đã lưu, lịch và danh sách hành lý trên trình duyệt này bằng nội dung trong tệp. Các mục không hợp lệ trong tệp sẽ được bỏ qua.</p><div class="builder-actions"><button class="btn secondary" data-action="about">Giữ dữ liệu hiện tại</button><button class="btn secondary" data-action="export">Tải bản sao hiện tại</button><button class="btn" id="confirm-restore">Thay bằng bản sao này</button></div>`);
+  $('[data-action="about"]', modal).focus();
+  $('#confirm-restore').addEventListener('click', () => {
+    state = restored;
+    const saved = persist();
+    modal.close();
+    render();
+    toast(saved ? 'Đã khôi phục dữ liệu.' : 'Đã mở bản sao cho phiên này. Trình duyệt chưa lưu được dữ liệu.');
+  }, {once:true});
+}
 async function action(button,event) {
   const {action:a,id,value,date}=button.dataset;
   if(a)event.preventDefault();
@@ -202,7 +213,18 @@ document.addEventListener('change',async e=>{
   if(t.dataset.pack){const range=`${packingRange.from}/${packingRange.to}`,ids=state.packingChecks[range]||[];state.packingChecks[range]=t.checked?[...new Set([...ids,t.dataset.pack])]:ids.filter(x=>x!==t.dataset.pack);persist();const rows=packing(state.plan,allLooks(),data.items,packingRange.from,packingRange.to),done=rows.filter(x=>state.packingChecks[range].includes(x.item.id)).length;$('.packing-summary').textContent=`${rows.length} món riêng · ${Object.keys(state.plan).filter(d=>d>=packingRange.from&&d<=packingRange.to).length} ngày đã lên lịch · đã xếp ${done}/${rows.length} món`;}
   if(t.id==='import-file'&&t.files[0]){
     const file=t.files[0];if(file.size>1000000){toast('Tệp quá lớn. Hãy chọn bản sao lưu FORME dưới 1 MB.');return;}
-    try{const raw=JSON.parse(await file.text()),record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);if(!record(raw)||raw.version!==1||!Array.isArray(raw.availableItemIds)||!Array.isArray(raw.favoriteOutfitIds)||!Array.isArray(raw.createdOutfits)||!record(raw.plan)||!record(raw.packingChecks))throw new Error();state=validateState(raw,data.items,data.looks);persist();modal.close();render();toast('Đã khôi phục dữ liệu; các mục không hợp lệ được bỏ qua.');}catch{toast('Tệp chưa đúng định dạng sao lưu FORME. Dữ liệu hiện tại được giữ nguyên.');}
+    const stillSelecting = () => modal.open && t.isConnected && t.files[0] === file;
+    try {
+      const raw = JSON.parse(await file.text());
+      if (!stillSelecting()) return;
+      const record = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+      if (!record(raw) || raw.version !== 1 || !Array.isArray(raw.availableItemIds) ||
+        !Array.isArray(raw.favoriteOutfitIds) || !Array.isArray(raw.createdOutfits) ||
+        !record(raw.plan) || !record(raw.packingChecks)) throw new Error();
+      confirmRestore(validateState(raw, data.items, data.looks));
+    } catch {
+      if (stillSelecting()) toast('Tệp chưa đúng định dạng sao lưu FORME. Dữ liệu hiện tại được giữ nguyên.');
+    }
   }
 });
 document.addEventListener('submit',e=>{

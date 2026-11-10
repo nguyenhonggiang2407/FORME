@@ -17,7 +17,7 @@ FORME turns fashion inspiration into a small daily routine: choose available pie
 - A deterministic outfit builder using real catalogue items, occasion and manually chosen temperature. Cool-weather combinations require a layer. There are no AI or live-weather claims.
 - Saved favorites and custom outfits, with local Monday-based calendar weeks.
 - A date-range packing checklist that deduplicates repeated items and counts how many planned outfits use each piece.
-- JSON backup/restore, clipboard export and print-friendly packing lists.
+- JSON backup/restore, with confirmation and an option to download the current backup before replacing it. Clipboard export and print-friendly packing lists are also available.
 
 All personal state stays in this browser's `localStorage`. There are no accounts, cloud synchronization, payment services or databases. A visible notice appears if browser storage is unavailable. This release uses a fixed demonstration wardrobe; it does not upload your personal clothing photos.
 
